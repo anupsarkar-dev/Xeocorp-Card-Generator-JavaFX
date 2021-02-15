@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="701.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CardController">
+   <top>
+      <TitledPane animated="false" prefWidth="636.0" text="Operation" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="693.0" prefWidth="639.0">
+               <children>
+                  <Pane layoutX="-4.0" layoutY="-1.0" prefHeight="369.0" prefWidth="640.0" style="-fx-background-color: lightgrey;">
+                     <children>
+                        <ImageView fx:id="cardImg" fitHeight="366.0" fitWidth="636.0" layoutX="3.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../files/placeholder4.png" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <Pane layoutX="-1.0" layoutY="373.0" prefHeight="109.0" prefWidth="199.0" style="-fx-background-color: #EEEEEE;">
+                     <children>
+                        <ImageView fitHeight="69.0" fitWidth="113.0" layoutX="62.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../files/bar_code_price-512.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="BAR" layoutX="39.0" layoutY="81.0" mnemonicParsing="false" selected="true" text="Generate Bar Code" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="qr" layoutX="211.0" layoutY="373.0" prefHeight="108.0" prefWidth="211.0" style="-fx-background-color: #EEEEEE;">
+                     <children>
+                        <ImageView fitHeight="70.0" fitWidth="87.0" layoutX="70.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../files/240_F_111019051_il3FxcpObUU4bTGQ50XPPMLaCe1IBs4k%20copy.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="QR" layoutX="46.0" layoutY="84.0" mnemonicParsing="false" selected="true" text="Generate QR Code" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="generateBtn" disable="true" layoutX="2.0" layoutY="487.0" mnemonicParsing="false" onAction="#generate" prefHeight="51.0" prefWidth="629.0" text="GENERATE CARD">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+                  <Pane layoutX="433.0" layoutY="373.0" prefHeight="110.0" prefWidth="199.0" style="-fx-background-color: #EEEEEE;">
+                     <children>
+                        <ImageView fitHeight="63.0" fitWidth="59.0" layoutX="77.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../files/images2.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="folderBtn" layoutX="28.0" layoutY="79.0" mnemonicParsing="false" onAction="#setFolder" prefHeight="25.0" prefWidth="160.0" text="Set Directory" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="541.0" prefHeight="119.0" prefWidth="156.0" style="-fx-background-color: #F5F5F5;">
+                     <children>
+                        <Text fx:id="total" layoutX="17.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000">
+                           <font>
+                              <Font name="Century Gothic" size="64.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#1920e3" />
+                                    <Stop color="#b6d149" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                        
+                         
+                        <Label layoutX="27.0" layoutY="80.0" text="TOTAL">
+                           <font>
+                              <Font name="Century Gothic" size="30.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#1920e3" />
+                                    <Stop color="#e3b819ab" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="169.0" layoutY="540.0" prefHeight="118.0" prefWidth="156.0" style="-fx-background-color: #EEEEEE;">
+                     <children>
+                        <Label layoutX="13.0" layoutY="80.0" text="SUCCESS">
+                           <font>
+                              <Font name="Century Gothic" size="30.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#1b7de3" />
+                                    <Stop color="#48cf64" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Text fx:id="success" layoutX="24.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000">
+                           <font>
+                              <Font name="Century Gothic" size="65.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="#1496d7" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                    
+                     </children>
+                  </Pane>
+                  <Pane layoutX="328.0" layoutY="540.0" prefHeight="115.0" prefWidth="156.0" style="-fx-background-color: #F5F5F5;">
+                     <children>
+                        <Label layoutX="30.0" layoutY="78.0" text="ERROR">
+                           <font>
+                              <Font name="Century Gothic" size="30.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#e3651b" />
+                                    <Stop color="#e3bc1b" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Text fx:id="error" layoutX="25.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000">
+                           <font>
+                              <Font name="Century Gothic" size="64.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#e3cd1b" />
+                                    <Stop color="#e3581b" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="487.0" layoutY="539.0" prefHeight="136.0" prefWidth="156.0" style="-fx-background-color: #EEEEEE;">
+                     <children>
+                        <Button fx:id="reportBtn" blendMode="RED" layoutX="3.0" layoutY="99.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="138.0" text="Report" textAlignment="JUSTIFY" textFill="#070707" textOverrun="LEADING_ELLIPSIS">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </Button>
+                        <Text fx:id="ID" layoutX="52.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00000000">
+                           <font>
+                              <Font name="Century Gothic" size="18.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#1920e3" />
+                                    <Stop color="#e3b819ab" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                        <Label layoutX="7.0" layoutY="5.0" text="ID    :">
+                           <font>
+                              <Font name="Century Gothic" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#1920e3" />
+                                    <Stop color="#e3b819ab" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="7.0" layoutY="34.0" text="Name :">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#1920e3" />
+                                    <Stop color="#e3b819ab" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Text fx:id="Name" layoutX="53.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ABC">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#1920e3" />
+                                    <Stop color="#e3b819ab" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                        <Label layoutX="7.0" layoutY="52.0" text="Acc    : " textFill="#2f2a2a">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="acc_id" layoutX="53.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00000000">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="barStatus" fill="#464444" layoutX="52.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ok">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="7.0" layoutY="70.0" text="BAR    :">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="qrStatus" layoutX="52.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ok">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="7.0" layoutY="83.0" text="QR      :">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </top>
+</BorderPane>
