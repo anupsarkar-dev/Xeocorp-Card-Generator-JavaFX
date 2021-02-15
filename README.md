@@ -1,12 +1,12 @@
 **XEOCORP Bulk Business Card Generator with QR Code**
 
-<img src="./files/sample.png" alt="Logo" style="width: 220px;"/></div>
+<img src="./files/sample.png" alt="Logo" style="width: 180px;"/></div>
 
  
 
-**Generate Bulk/Multiple Business Card by reading files from folder.**
+##Generate Bulk/Multiple Business Card by reading files from folder.**
 
-Features:
+##Features:
 
 1. Read User wise data from folder.
 2. Populate business card along with Bar Code &amp; QR Code for each user.
@@ -15,7 +15,7 @@ Features:
 5. Photoshop PSD template is also given so that you can create your own business card template.
 6. Faster card generation &amp; report
 
-Requirements:
+##Requirements:
 
 1. User wise Folder Name should be unique. Inside the user folder must contain 2 more file(user image,info) with same name. For example , Folder &quot;001&quot; -\&gt; Files (001.jpg and 001.txt )
 
@@ -23,7 +23,7 @@ Requirements:
 
 1. Card Template size must be 900 X 574
 
-Technology Used :
+##Technology Used :
 
 1. Java
 2. JavaFx
