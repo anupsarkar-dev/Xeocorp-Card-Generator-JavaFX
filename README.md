@@ -36,3 +36,5 @@
 ## Output :
 
   <img src="./files/sample2.png"   /> 
+## Video Tutorial
+https://www.youtube.com/watch?v=VVlrRC3KttA&t=23s
