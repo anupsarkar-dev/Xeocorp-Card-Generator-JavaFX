@@ -1,6 +1,9 @@
 # XEOCORP Bulk Business Card Generator with QR Code**
 
-<img src="./files/sample.png" width="400" /> 
+<p align="center">
+ <img src="./files/ui.png" width="500" /> 
+</p>
+
 
  
 
