@@ -32,3 +32,10 @@
 1. Java
 2. JavaFx
 3. Google zxing Bar/Qr Code Generator
+
+## Output :
+
+  <img src="./files/sample2.png"   /> 
+  
+## Video Tutorial
+### https://www.youtube.com/watch?v=VVlrRC3KttA&t=23s
